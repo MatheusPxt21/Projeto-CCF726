@@ -1,0 +1,47 @@
+# Ambientes Virtuais
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Byte-code e Cache do Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# Dados Locais
+data/raw/*
+data/processed/*
+data/interim/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Modelos e Artefatos Treinados
+models/*
+!models/.gitkeep
+
+# Credenciais, Variáveis de Ambiente e Chaves de Nuvem
+.env
+.env.local
+aws_credentials
+*.pem
+credentials.json
+
+# Logs e Saídas de Execução
+*.log
+logs/
+
+# IDEs e Editores
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
