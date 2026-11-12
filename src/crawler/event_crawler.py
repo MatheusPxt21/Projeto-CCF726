@@ -637,6 +637,14 @@ def run_pipeline():
     print(f"Base total antes da expansão: {len(base_total)} sessões "
           f"({len(eventos_curados)} curadas + {len(eventos_web)} via scraping)")
 
+    # -- Persistência da base real (insumo do gerador de incidentes, src/simulation) --
+    for e in eventos_curados:
+        e.setdefault("fonte", "curado")
+    for e in eventos_web:
+        e.setdefault("fonte", "web_scraping")
+    with open(os.path.join(RAW_DATA_DIR, "eventos_base_reais.json"), "w", encoding="utf-8") as f:
+        json.dump(base_total, f, ensure_ascii=False, indent=1)
+
     # -- Camada 3: Expansão Combinatória --
     print("\nGerando 50.000 instâncias de realocação sintética (Data Augmentation)...")
     dataset_completo = expand_realocation_scenarios(base_total, target_size=50000)
