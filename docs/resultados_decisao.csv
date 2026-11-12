@@ -1,0 +1,7 @@
+estrategia,score_realizado_medio,score_realizado_dp,regret_medio,taxa_conflito_critico,top1_acc,top3_acc,p_wilcoxon_vs_RandomForest
+Aleatória,66.88,25.95,27.28,0.292,0.072,0.174,5.435e-71
+Baseline Gulosa,67.69,31.69,26.46,0.314,0.194,0.364,3.151e-55
+Menor sala que cabe,77.88,16.47,16.27,0.16,0.152,0.314,4.306e-56
+Random Forest,91.37,7.418,2.782,0,0.466,0.784,
+XGBoost,91.29,7.519,2.872,0.002,0.448,0.784,
+Oráculo,94.16,6.006,0,0,1,1,
