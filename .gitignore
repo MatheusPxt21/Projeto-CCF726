@@ -21,6 +21,7 @@ data/raw/*
 data/processed/*
 data/interim/*
 !data/raw/.gitkeep
+!data/raw/eventos_base_reais.json
 !data/processed/.gitkeep
 
 # Modelos e Artefatos Treinados
